@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "06_automated_scientific_intelligence_reporting_system"
+version = "0.1.0"
+description = "Hiring-focused industrial bioinformatics project"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
