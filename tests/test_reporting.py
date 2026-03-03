@@ -1,4 +1,4 @@
-from src.narrative.executive_summary import build_executive_summary
+from src.narrative.executive_summary import build_executive_summary, build_portfolio_summary
 from src.parsers.pipeline_output import parse_summary_line, parse_summary_lines
 import pytest
 
@@ -31,3 +31,16 @@ def test_parse_summary_lines_ignores_comments_and_blanks() -> None:
 def test_parse_summary_lines_reports_invalid_line() -> None:
     with pytest.raises(ValueError):
         parse_summary_lines("S01,broken_line")
+
+
+def test_build_portfolio_summary() -> None:
+    summaries = parse_summary_lines("S01, 1000, 1\nS02, 2000, 0")
+    text = build_portfolio_summary(summaries)
+    assert "2 samples" in text
+    assert "3000 total reads" in text
+    assert "S01" in text
+
+
+def test_build_portfolio_summary_empty() -> None:
+    text = build_portfolio_summary([])
+    assert "No samples processed" in text
