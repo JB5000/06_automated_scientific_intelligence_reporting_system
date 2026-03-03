@@ -17,3 +17,16 @@ def parse_summary_line(line: str) -> PipelineSummary:
         reads_total=int(reads_total),
         pathogen_hits=int(pathogen_hits),
     )
+
+
+def parse_summary_lines(text: str) -> list[PipelineSummary]:
+    summaries: list[PipelineSummary] = []
+    for idx, line in enumerate(text.splitlines(), start=1):
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        try:
+            summaries.append(parse_summary_line(stripped))
+        except Exception as exc:
+            raise ValueError(f"Invalid summary line {idx}: {stripped}") from exc
+    return summaries
