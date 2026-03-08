@@ -28,3 +28,29 @@ Industrial-grade project focused on bioinformatics/data engineering hiring signa
 - Added parser for standardized pipeline summary lines.
 - Added executive narrative generator for decision-ready text.
 - Added unit-test skeleton for parser and risk wording.
+
+## Roadmap – Q1 2026
+
+- [ ] Add LLM-based executive summary generation
+- [ ] Support DOCX export
+
+## Roadmap – Q1 2026
+
+- [ ] Add LLM-based executive summary generation
+- [ ] Support DOCX export
+
+<!-- 84a21a7d -->
+
+## Roadmap – Q1 2026
+
+- [ ] Add LLM-based executive summary generation
+- [ ] Support DOCX export
+
+<!-- 48b2f4c2 -->
+
+## Roadmap – Q1 2026
+
+- [ ] Add LLM-based executive summary generation
+- [ ] Support DOCX export
+
+<!-- 3f39de2c -->
