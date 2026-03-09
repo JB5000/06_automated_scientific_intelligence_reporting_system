@@ -54,3 +54,10 @@ Industrial-grade project focused on bioinformatics/data engineering hiring signa
 - [ ] Support DOCX export
 
 <!-- 3f39de2c -->
+
+## Roadmap – Q1 2026
+
+- [ ] Add LLM-based executive summary generation
+- [ ] Support DOCX export
+
+<!-- 20e7005f -->
